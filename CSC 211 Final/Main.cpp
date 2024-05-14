@@ -45,8 +45,9 @@ int main() {
 
 
 
-    //load customer data from file
+    //include class AllCustomerData to call void functions to load data from file and operate menu options
     AllCustomerData allCustomers;
+    //load customer data from file
     allCustomers.loadFromFile("customer_info.txt");
 
     allCustomers.loadPurchaseDataFromFile("purchases.txt");
