@@ -21,6 +21,8 @@ public:
     Purchase() = default;
     Purchase(int accNum, const string& itm, const string& dt, double amt)
         : accountNumber(accNum), item(itm), date(dt), amount(amt) {}
+
+    static vector<Purchase> loadFromFile(const string& filename);
 };
 
 //class that has AllCustomer Data Model

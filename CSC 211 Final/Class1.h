@@ -14,6 +14,8 @@ public:
     //load customer data from a file
     void loadFromFile(const string& filename);
 
+    void loadPurchaseDataFromFile(const string& filename);
+
     //print information of all customers
     void printAllCustomers() const;
 

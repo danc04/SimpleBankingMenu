@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     //Print Welcome Menu
     cout << setfill('-') << setw(120) << "-" << endl;
-    cout << setfill(' ') << setw(80) << "WELCOME! THANK YOU FOR BANKING WITH CSC 211!" << endl;
+    cout << setfill(' ') << setw(80) << "WELCOME! THANK YOU FOR CHOOSING CSC 211!" << endl;
     cout << setfill('-') << setw(120) << "-" << endl;
     cout << setfill(' ') << setw(75) << "Enter Customer Info To Get Started:" << endl;
     cout << setfill(' ') << setw(35) << " " << setfill('-') << setw(45) << "-" << endl;
@@ -20,8 +20,8 @@ int main() {
     cout << setfill(' ') << setw(50) << " " << setfill('-') << setw(15) << "-" << endl;
     cout << setfill(' ') << setw(56) << "Account Number: " << endl;
     cout << setfill(' ') << setw(55) << " " << setfill('-') << setw(15) << "-" << endl;
-    cout << setfill(' ') << setw(56) << "Street Address: " << endl;
-    cout << setfill(' ') << setw(55) << " " << setfill('-') << setw(15) << "-" << endl;
+    cout << setfill(' ') << setw(67) << "Street Address(No Spaces): " << endl;
+    cout << setfill(' ') << setw(66) << " " << setfill('-') << setw(10) << "-" << endl;
     cout << setfill(' ') << setw(46) << "City: " << endl;
     cout << setfill(' ') << setw(45) << " " << setfill('-') << setw(15) << "-" << endl;
     cout << setfill(' ') << setw(47) << "State: " << endl;
@@ -31,10 +31,25 @@ int main() {
     cout << setfill(' ') << setw(54) << "Phone Number: " << endl;
     cout << setfill(' ') << setw(53) << " " << setfill('-') << setw(15) << "-" << endl;
 
+    cout << setfill('-') << setw(120) << "-" << endl;
+    cout << setfill(' ') << setw(71) << "Enter Purchase Information" << endl;
+    cout << setfill(' ') << setw(35) << " " << setfill('-') << setw(45) << "-" << endl;
+    cout << setfill(' ') << setw(56) << "Account Number: " << endl;
+    cout << setfill(' ') << setw(55) << " " << setfill('-') << setw(15) << "-" << endl;
+    cout << setfill(' ') << setw(46) << "Item: " << endl;
+    cout << setfill(' ') << setw(45) << " " << setfill('-') << setw(15) << "-" << endl;
+    cout << setfill(' ') << setw(58) << "Date(mm/dd/yyyy): " << endl;
+    cout << setfill(' ') << setw(57) << " " << setfill('-') << setw(15) << "-" << endl;
+    cout << setfill(' ') << setw(48) << "Amount: " << endl;
+    cout << setfill(' ') << setw(47) << " " << setfill('-') << setw(15) << "-" << endl << endl;
+
+
 
     //load customer data from file
     AllCustomerData allCustomers;
     allCustomers.loadFromFile("customer_info.txt");
+
+    allCustomers.loadPurchaseDataFromFile("purchases.txt");
 
     int choice;
     do {
@@ -95,7 +110,7 @@ int main() {
             cin >> newCustomer.lastName;
             cout << "Account #: ";
             cin >> newCustomer.accountNumber;
-            cout << "Street Address: ";
+            cout << "Street Address(No Spaces): ";
             cin >> newCustomer.streetAddress;
             cout << "City: ";
             cin >> newCustomer.city;
@@ -121,7 +136,7 @@ int main() {
                 cin >> newCustomers[i].lastName;
                 cout << "Account #: ";
                 cin >> newCustomers[i].accountNumber;
-                cout << "Street Address: ";
+                cout << "Street Address(No Spaces): ";
                 cin >> newCustomers[i].streetAddress;
                 cout << "City: ";
                 cin >> newCustomers[i].city;
@@ -145,7 +160,7 @@ int main() {
             cin >> updatedCustomer.firstName;
             cout << "Last Name: ";
             cin >> updatedCustomer.lastName;
-            cout << "Street Address: ";
+            cout << "Street Address(No Spaces): ";
             cin >> updatedCustomer.streetAddress;
             cout << "City: ";
             cin >> updatedCustomer.city;
@@ -173,7 +188,7 @@ int main() {
             cout << "Enter purchase information:" << endl;
             cout << "Item: ";
             cin >> newPurchase.item;
-            cout << "Date: ";
+            cout << "Date(mm/dd/yyyy): ";
             cin >> newPurchase.date;
             cout << "Amount: ";
             cin >> newPurchase.amount;
@@ -192,7 +207,7 @@ int main() {
                 cout << "Enter purchase " << i + 1 << " information:" << endl;
                 cout << "Item: ";
                 cin >> newPurchases[i].item;
-                cout << "Date: ";
+                cout << "Date(mm/dd/yyyy): ";
                 cin >> newPurchases[i].date;
                 cout << "Amount: ";
                 cin >> newPurchases[i].amount;

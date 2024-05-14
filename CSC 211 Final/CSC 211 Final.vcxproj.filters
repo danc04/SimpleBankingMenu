@@ -32,5 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="customer_info.txt" />
+    <Text Include="purchases.txt" />
   </ItemGroup>
 </Project>
