@@ -1,8 +1,8 @@
 #pragma once
 
 
-#ifndef CUSTOMER_AND_PURCHASE_H
-#define CUSTOMER_AND_PURCHASE_H
+#ifndef CUSTOMERANDPURCHASE_H
+#define CUSTOMERANDPURCHASE_H
 
 #include <string>
 #include <vector>
